@@ -14,16 +14,17 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "nombres")
-    private String firstName;
+    private String firtsName;
 
     @Column(name = "apellidos")
     private String lastName;
 
-    @Column(name = "email")
-    private String emailId;
+    @Column(name = "email", unique = true) //unique = registro unico
+    private String email;
 
 
 }
